@@ -1,0 +1,5 @@
+.is-invalid {
+    color: #32b923;
+    background-color: #c3e7b7 !important;
+    border-color: #a0e773 !important;
+}

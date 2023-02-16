@@ -1,8 +1,7 @@
-
- {
-     background-color: #206c1a;
-     padding: 20px;
- }
+html, body  {
+    background-color: #206c1a;
+    padding: 20px;
+}
 
 .row {
     background-color: #206c1a;
@@ -29,7 +28,3 @@
 
 
 
-/* Ir t.t. */
-  /*templeituose stiliu dedam i style ir head.
-/*</style>
-/</head>

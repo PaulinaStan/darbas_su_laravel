@@ -13,6 +13,8 @@ services:
       APACHE_SERVER_NAME: laravel.local
       APPLICATION_ENV: development
 
+
+
   db:
     image: mysql:latest
     command: --default-authentication-plugin=mysql_native_password
