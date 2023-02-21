@@ -32,5 +32,6 @@ class OrderDetails extends Model
         'product_name',
         'product_id',
         'quantity',
+        'price',
     ];
 }

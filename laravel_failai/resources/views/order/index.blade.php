@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col s12">
-        <h1>Products</h1>
+        <h1>Orders</h1>
         <a href="{{route('orders.create')}}" class="btn btn-primary">Create</a>
         <table class="table">
             <thead>

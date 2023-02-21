@@ -4,7 +4,15 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UserUpdateRequest extends FormRequest
+/**
+ * Class CartRequest
+ *
+ * @package App\Http\Requests
+ *
+ * @property int $product_id
+ * @property int $quantity
+ */
+class CartRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +32,12 @@ class UserUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'     => ['required', 'string', 'min:3', 'max:255'],
-            'email'    => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['nullable', 'string', 'min:8', 'confirmed'],
+            'product_id' => 'required|numeric|exists:products,id',
+            'quantity' => 'required|numeric|min:1',
+            'name' => 'required|string',
+            'price' => 'required|numeric|min:0',
+            'image' => 'required|string',
         ];
     }
 }
+

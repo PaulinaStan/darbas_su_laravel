@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
-
+    public const STATUS_NEW = 'new';
     protected  $guarded = [
         'status_id',
         'payment_id',

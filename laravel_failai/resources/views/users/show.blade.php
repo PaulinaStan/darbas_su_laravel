@@ -1,4 +1,33 @@
 
+<head>
+    <style>
+        {
+            background-color: #206c1a;
+            padding: 20px;
+        }
+
+        .row {
+            background-color: #206c1a;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+        .table {
+            background-color: #4daf16;
+            text-align: left;
+            padding: 10px;
+        }
+        .btn {
+            background-color: #43a423;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
 
 <div class="row">
     <div class="col s12 m3">
