@@ -15,7 +15,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property string $description
  * @property string $image
  * @property int $status_id
+ * @property Status $status
  * @property int $parent_id
+ * @property Category $parent
  * @property int $sort_order
  * @property Carbon $created_at
  * @property Carbon $updated_at
@@ -34,4 +36,29 @@ class Category extends Model
         'parent_id',
         'sort_order',
     ];
+
+    public function parent(): BelongsTo
+    {
+        return $this->belongsTo(Category::class, 'parent_id');
+    }
+
+    public function status(): BelongsTo
+    {
+        return $this->belongsTo(Status::class);
+    }
+
+    public function children(): HasMany
+    {
+        return $this->hasMany(Category::class, 'parent_id');
+    }
+
+    public function products(): HasMany
+    {
+        return $this->hasMany(Product::class);
+    }
+
+    public function __toString(): string
+    {
+        return $this->name;
+    }
 }

@@ -28,5 +28,12 @@ class CartController extends Controller
 
         return redirect()->back()->with('success', __('messages.product_added_to_cart'));
     }
+
+    //funkciją, kuri rodyto pirkinių krepšelį:
+    public function index()
+    {
+        return view('cart.index');
+    }
+
 }
 

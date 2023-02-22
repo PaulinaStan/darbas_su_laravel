@@ -38,8 +38,6 @@ class Product extends Model
         'description',
         'image',
         'category_id',
-        'color',
-        'size',
         'price',
         'status_id',
     ];

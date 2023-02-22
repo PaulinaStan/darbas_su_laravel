@@ -26,3 +26,23 @@
     @csrf
     <button type="submit">Ištrinti produktą</button>
 </form>
+
+
+
+<!--Pridėti mygtuką "Add to Cart" kiekvienam produktui:-->
+
+@foreach($products as $product)
+    <div>
+        <h3>{{ $product->name }}</h3>
+        <p>{{ $product->description }}</p>
+        <p>{{ $product->price }} USD</p>
+        <form action="{{ route('cart.store') }}" method="POST">
+            @csrf
+            <input type="hidden" name="product_id" value="{{ $product->id }}">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+@endforeach
+
+
+
