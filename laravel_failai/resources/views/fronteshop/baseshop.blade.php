@@ -1,4 +1,4 @@
-@extends('home')
+@extends('main')
 @section('products')
     <h2>Products</h2>
     <div class="product selection">

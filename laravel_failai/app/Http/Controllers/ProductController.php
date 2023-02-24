@@ -19,5 +19,4 @@ class ProductController extends Controller
         return redirect()->route('cart.index')->with('success_message', 'Item was added to your cart!');
     }
 
-
 }

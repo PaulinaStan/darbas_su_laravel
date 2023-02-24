@@ -27,7 +27,6 @@ Route::group(['middleware' => SetLocale::class], function () {
         Route::get('/', [CartController::class, 'show'])->name('order.cart');
         Route::post('product/add', [CartController::class, 'create'])->name('product.add_to_cart');
         Route::post('product/{product}/update', [CartController::class, 'update'])->name('cart.product_update');
-        Route::post('/cart/add', 'CartController@add')->name('cart.add');
         Route::delete('product/{product}/delete', [CartController::class, 'destroy'])->name('cart.product_remove');
 
     });
